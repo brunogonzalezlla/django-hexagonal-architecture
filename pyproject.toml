@@ -15,8 +15,8 @@ dependencies = ["Django>=4.2"]
 requires-python = ">=3.8"
 
 [project.scripts]
-django-admin-hex = "django_admin_hex.cli:main"
+django-admin-hex = "django_hexagonal_cli.cli:main"
 
 [tool.setuptools]
 package-dir = {"" = "src"}
-packages = ["django_admin_hex"]
+packages = ["django_hexagonal_cli"]

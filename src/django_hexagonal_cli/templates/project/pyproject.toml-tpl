@@ -6,7 +6,7 @@ authors = [
     { name = "Your Name", email = "your@email.com" }
 ]
 readme = "README.md"
-requires-python = ">=__python_version__"
 dependencies = [
     "Django>=__django_version__"
 ]
+requires-python = ">=__python_version__"
