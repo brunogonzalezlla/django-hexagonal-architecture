@@ -1,22 +1,28 @@
-[build-system]
-requires = ["setuptools>=61"]
-build-backend = "setuptools.build_meta"
-
-[project]
-name = "django-admin-hex"
+[tool.poetry]
+name = "django-hexagonal-cli"
 version = "0.1.0"
-description = "Custom Django project and app starter with hexagonal architecture"
-authors = [
-    { name = "Bruno González Llaga", email = "brunogllaga@icloud.com" }
-]
+description = "A command-line tool to generate Django projects and apps following the hexagonal (ports and adapters) architecture."
+authors = ["brunogonzalezlla <brunogllaga@icloud.com>"]
+license = "MIT"
 readme = "README.md"
-license = { file = "LICENSE" }
-dependencies = ["Django>=4.2"]
-requires-python = ">=3.8"
+packages = [{ include = "django_hexagonal_cli", from = "src" }]
+keywords = ["django", "hexagonal", "cli", "codegen"]
 
-[project.scripts]
+[tool.poetry.dependencies]
+python = "^3.12"
+
+[tool.poetry.scripts]
 django-admin-hex = "django_hexagonal_cli.cli:main"
 
-[tool.setuptools]
-package-dir = {"" = "src"}
-packages = ["django_hexagonal_cli"]
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^4.2.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+profile = "black"
+
+[tool.black]
+line-length = 100
