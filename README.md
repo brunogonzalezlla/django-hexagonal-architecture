@@ -54,7 +54,9 @@ project_root/
 ## Example
 
 This repository includes a working example of a Django project with hexagonal architecture in the `example/` folder. You can explore it to see a real API implementation using this structure.
+[Example Project](https://github.com/brunogonzalezlla/django-hexagonal-architecture/tree/main/example)
 
 ## Resources
 - [Official Django documentation](https://docs.djangoproject.com/en/5.2/)
 - [Hexagonal architecture (Alistair Cockburn)](https://alistair.cockburn.us/hexagonal-architecture/)
+- [Project Github Repository](https://github.com/brunogonzalezlla/django-hexagonal-architecture)
