@@ -88,5 +88,9 @@ def main():
             create_project(project_name, project_template.resolve())
             create_app(app_name, project_name, app_template.resolve())
             return
+    elif command == "startapp":
+        app_name = args[1]
+        create_app(app_name, Path.cwd(), app_template.resolve())
+        return
 
     subprocess.run(["django-admin"] + args)
